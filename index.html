@@ -12,6 +12,20 @@
       margin: 0;
       /* overflow: hidden; */
     }
+    /* CSS for default styles */
+
+@media screen and (max-width: 600px) {
+  /* CSS for small screens (e.g., mobile devices) */
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* CSS for medium screens (e.g., tablets) */
+}
+
+@media screen and (min-width: 1025px) {
+  /* CSS for large screens (e.g., desktops) */
+}
+
     .chapter {
       display: none;
     }
@@ -1746,8 +1760,10 @@ li {
 
 .container{
     width : 100% ;
+    max-width 1200px ;
     height : 600px ;
     display : flex ;
+  margin : 0 auto ;
     flex-direction : column ;
     justify-content : center ;
     align-items : center ;
@@ -1759,6 +1775,7 @@ li {
 
   </style>
 </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
     <button class="pushable" id="home-button">
       <span class="front">
