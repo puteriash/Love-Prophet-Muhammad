@@ -16,13 +16,6 @@
     }
 
 
-#recommendation-message {
-            display: none;
-            background-color: #ffd700; /* Yellow */
-            padding: 10px;
-            margin: 20px;
-            border-radius: 5px;
-        }
 
   
 
@@ -1791,7 +1784,7 @@ li {
             <a href="#chapter2" class="chapter-link" data-chapter="chapter1_page1">
               <div class="button button--piyo">
                   <div class="button__wrapper">
-                      <span class="button__text">Chapter 1</span>
+                      <span class="button__text">Fairness</span>
                   </div>
                   <div class="characterBox">
                       <div class="character wakeup">
@@ -1811,7 +1804,7 @@ li {
             <a href="#chapter3" class="chapter-link" data-chapter="chapter2_page1">
               <div class="button button--hoo">
                   <div class="button__wrapper">
-                      <span class="button__text">Chapter 2</span>
+                      <span class="button__text">Affection</span>
                   </div>
                   <div class="characterBox">
                       <div class="character wakeup">
@@ -1831,7 +1824,7 @@ li {
             <a href="#chapter4" class="chapter-link" data-chapter="chapter3_page1">
               <div class="button button--pen">
                   <div class="button__wrapper">
-                      <span class="button__text">Chapter 3</span>
+                      <span class="button__text">Consideration</span>
                   </div>
                   <div class="characterBox">
                       <div class="character wakeup">
@@ -1851,7 +1844,7 @@ li {
             <a href="#teacher">
               <div class="button button--piyo">
                   <div class="button__wrapper">
-                      <span class="button__text">Teacher</span>
+                      <span class="button__text">Contact Us</span>
                   </div>
                   <div class="characterBox">
                       <div class="character wakeup">
@@ -1870,11 +1863,11 @@ li {
           <!-- <li><a href="#teacher"> Teacher</a></li> -->
           <!-- <li><a href="#quiz">Quiz</a></li> -->
         </ul>
-        <button class="next-button chapter-link" data-chapter="chapter1_page1">
+<!--         <button class="next-button chapter-link" data-chapter="chapter1_page1">
           <span class="next-button-front">
             Start Reading
           </span>
-        </button>
+        </button> -->
       </div>
       </div>
       <div>
@@ -2536,12 +2529,7 @@ li {
       </div>
     </div>
 
-    </div>
-       <div id="recommendation-message">
-        <p>
-            We recommend using a laptop or iPad for the best experience on this site.
-        </p>
-    </div>
+  
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script>
@@ -2583,17 +2571,16 @@ li {
       });
     });
   </script>
-      <script>
+   <script>
         // Check if the user is using a phone device
         function isMobileDevice() {
             return (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
         }
 
-        // Display the recommendation message if a phone device is detected
+        // Display an alert message if a phone device is detected
         window.onload = function () {
             if (isMobileDevice()) {
-                var recommendationMessage = document.getElementById('recommendation-message');
-                recommendationMessage.style.display = 'block';
+                alert("We recommend using a laptop or iPad for the best experience on this site.");
             }
         };
     </script>
