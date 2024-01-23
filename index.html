@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interactive Storybook</title>
   <style>
     /* CSS styles for the interactive storybook */
@@ -14,7 +16,13 @@
     }
 
 
-
+#recommendation-message {
+            display: none;
+            background-color: #ffd700; /* Yellow */
+            padding: 10px;
+            margin: 20px;
+            border-radius: 5px;
+        }
 
   
 
@@ -2529,6 +2537,11 @@ li {
     </div>
 
     </div>
+       <div id="recommendation-message">
+        <p>
+            We recommend using a laptop or iPad for the best experience on this site.
+        </p>
+    </div>
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script>
@@ -2570,6 +2583,20 @@ li {
       });
     });
   </script>
+      <script>
+        // Check if the user is using a phone device
+        function isMobileDevice() {
+            return (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
+        }
+
+        // Display the recommendation message if a phone device is detected
+        window.onload = function () {
+            if (isMobileDevice()) {
+                var recommendationMessage = document.getElementById('recommendation-message');
+                recommendationMessage.style.display = 'block';
+            }
+        };
+    </script>
 
 <script>
   const correctGuess = "answer4";
